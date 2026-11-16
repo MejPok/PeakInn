@@ -12,6 +12,15 @@
 /[Uu]ser[Ss]ettings/
 *.log
 
+# The Unity project lives in the PeakInn subdirectory of this repository.
+/PeakInn/[Ll]ibrary/
+/PeakInn/[Tt]emp/
+/PeakInn/[Oo]bj/
+/PeakInn/[Bb]uild/
+/PeakInn/[Bb]uilds/
+/PeakInn/[Ll]ogs/
+/PeakInn/[Uu]ser[Ss]ettings/
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
