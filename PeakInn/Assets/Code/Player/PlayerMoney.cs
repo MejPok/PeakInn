@@ -9,8 +9,8 @@ namespace Assets.Code.Player
     class PlayerMoney : MonoBehaviour
     {
         public static PlayerMoney Instance;
-
-        public int Money;
+        public int Money = 300;
+        public int Peaches = 10;
 
         private void Start()
         {

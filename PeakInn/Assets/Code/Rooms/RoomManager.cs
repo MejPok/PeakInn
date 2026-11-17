@@ -17,8 +17,6 @@ public class RoomManager : MonoBehaviour
         Instance = this;
         CreateNewRoom("Basic Room");
         CreateNewRoom("Basic Room");
-        CreateNewRoom("Basic Room");
-        CreateNewRoom("Basic Room");
     }
 
     Vector2 newRoomPosition()

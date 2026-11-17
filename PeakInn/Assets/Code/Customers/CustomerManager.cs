@@ -1,5 +1,6 @@
 using Assets.Code.Customers;
 using Assets.Code.Player;
+using Assets.Code.Round;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ public class CustomerManager : MonoBehaviour
     public int Reputation;
     public string currentEvent;
     public int WarmthRequiredMultiplier;
-
+    
     public int CustomersInQueue;
 
     public List<CustomerBehaviour> customersHosted = new List<CustomerBehaviour>();
@@ -24,7 +25,7 @@ public class CustomerManager : MonoBehaviour
     private void Start()
     {
         Instance = this;
-        NewDay();
+        RoundControl.Instance.startDayEvent += NewDay;
     }
 
     public void CustomerServed()
