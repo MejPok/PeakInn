@@ -12,7 +12,7 @@ namespace Assets.Code.Canvas.EndScreen
 
         private void Start()
         {
-            RoundControl.Instance.DayEndEvent += DisplayScreen;
+            
         }
 
         public void DisplayScreen()
