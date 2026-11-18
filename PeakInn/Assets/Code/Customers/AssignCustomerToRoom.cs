@@ -45,7 +45,10 @@ namespace Assets.Code.Customers
                     QueueControl.Instance.customersInQueue.Remove(QueueControl.Instance.currentCustomer);
                     room.customersInside.Add(QueueControl.Instance.currentCustomer.GetComponent<CustomerBehaviour>());
 
-                    if(QueueControl.Instance.customersInQueue.Count == 0)
+                    QueueControl.Instance.currentCustomer.GetComponent<CustomerBehaviour>().InRoom = true;
+                    QueueControl.Instance.currentCustomer.GetComponent<CustomerBehaviour>().GoToRoom(room);
+
+                    if (QueueControl.Instance.customersInQueue.Count == 0)
                     {
                         RoundControl.Instance.AllCustomersAssigned();
                     }
@@ -53,6 +56,17 @@ namespace Assets.Code.Customers
             }
         }
 
-        
+        public void RefuseCustomer()
+        {
+            CustomerManager.Instance.Reputation -= 1;
+            QueueControl.Instance.customersInQueue.Remove(QueueControl.Instance.currentCustomer);
+
+            if (QueueControl.Instance.customersInQueue.Count == 0)
+            {
+                RoundControl.Instance.AllCustomersAssigned();
+            }
+        }
+
+
     }
 }

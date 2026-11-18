@@ -13,5 +13,6 @@ namespace Assets.Code.Rooms
         public int Capacity;
         public int Warmth;
         public int Cost;
+        public int BaseCost;
     }
 }

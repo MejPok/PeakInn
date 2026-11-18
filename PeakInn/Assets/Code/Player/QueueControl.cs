@@ -1,3 +1,4 @@
+using Assets.Code.Customers;
 using Assets.Code.Round;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,15 +21,15 @@ public class QueueControl : MonoBehaviour
         {
             if(i == 0)
             {
-                customersInQueue[i].transform.position = new Vector2(queueStartPoint.position.x, queueStartPoint.position.y);
+                customersInQueue[i].GetComponent<CustomerBehaviour>().nextPoint = new Vector2(queueStartPoint.position.x, queueStartPoint.position.y);
                 
             } else if(i == 1)
             {
-                customersInQueue[i].transform.position = new Vector2(queueStartPoint.position.x, queueStartPoint.position.y + 1.3f);
+                customersInQueue[i].GetComponent<CustomerBehaviour>().nextPoint = new Vector2(queueStartPoint.position.x, queueStartPoint.position.y + 1.3f);
                 
             } else
             {
-                customersInQueue[i].transform.position = new Vector2(queueStartPoint.position.x - (1.3f * i), queueStartPoint.position.y + 1.3f);
+                customersInQueue[i].GetComponent<CustomerBehaviour>().nextPoint = new Vector2(queueStartPoint.position.x - (1.3f * i), queueStartPoint.position.y + 1.3f);
                 
             }
         }

@@ -55,7 +55,7 @@ public class CustomerManager : MonoBehaviour
     }
     public void CreateAnCustomer()
     {
-        var customer = Instantiate(CustomerPrefab, transform.position, Quaternion.identity);
+        var customer = Instantiate(CustomerPrefab, new Vector2(-10, 0), Quaternion.identity);
         var behaviour = customer.GetComponent<CustomerBehaviour>();
         behaviour.Needs = NewCustomerNeed();
         maxId += 1;

@@ -10,6 +10,10 @@ public class RoomManager : MonoBehaviour
     
     public List<Room> createdRooms = new List<Room>();
     public List<RoomType> roomTypes = new List<RoomType>();
+
+    public int ClassicRoomCount = 0;
+    public int WarmRoomCount = 0;
+
     public Transform roomRoot;
 
     private void Awake() {
@@ -52,6 +56,17 @@ public class RoomManager : MonoBehaviour
             roomComponent.customersOccupying = 0;
 
             createdRooms.Add(roomComponent);
+
+            if(roomType == "Basic Room")
+            {
+                ClassicRoomCount++;
+                type.Cost = type.BaseCost * ClassicRoomCount;
+            } else
+            {
+                WarmRoomCount++;
+                type.Cost = type.BaseCost * WarmRoomCount;
+
+            }
 
         }
         

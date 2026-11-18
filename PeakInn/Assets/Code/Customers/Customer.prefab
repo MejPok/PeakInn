@@ -111,6 +111,8 @@ MonoBehaviour:
     rid: -2
   id: 0
   roomId: -1
+  nextPoint: {x: 0, y: 0}
+  Speed: 0.7
   references:
     version: 2
     RefIds:

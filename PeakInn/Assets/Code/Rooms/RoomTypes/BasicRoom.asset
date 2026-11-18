@@ -16,4 +16,5 @@ MonoBehaviour:
   Name: Basic Room
   Capacity: 2
   Warmth: 30
-  Cost: 50
+  Cost: 0
+  BaseCost: 80

@@ -39,10 +39,6 @@ namespace Assets.Code.Canvas.EndScreen
             FoodConsumedPerDayText.text = $"Peaches consumed today {consumedFood}";
             MoneyGainedPerDayText.text = $"Money gained today {moneyGained}";
             CapacityText.text = $"Inn capacity {currentCapacity} / {maxCapacity}";
-
-
-
-            
         }
 
     }
