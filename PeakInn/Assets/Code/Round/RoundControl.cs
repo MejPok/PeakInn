@@ -17,10 +17,16 @@ namespace Assets.Code.Round
         public UnityAction startDayEvent;
 
 
-
-        private void Start()
+        /// <summary>
+        /// Awake is called when the script instance is being loaded.
+        /// </summary>
+        void Awake()
         {
             Instance = this;
+            
+        }
+        private void Start()
+        {
             roundState = RoundState.WaitingForStart;
         }
 

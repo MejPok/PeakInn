@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 4467008385139728842}
   - component: {fileID: 989967282996218635}
   - component: {fileID: 1414187280867061026}
+  - component: {fileID: 7499778137031045226}
   m_Layer: 0
   m_Name: StateManager
   m_TagString: Untagged
@@ -80,7 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
   createdRooms: []
-  roomTypes: []
+  roomTypes:
+  - {fileID: 11400000, guid: c64258cb2e6e8b648814a1dc607ea8ac, type: 2}
   roomRoot: {fileID: 3127614082090594780}
 --- !u!114 &4467008385139728842
 MonoBehaviour:
@@ -94,7 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36683d7d5df5f494497837f99597a3c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Code.Player.PlayerMoney
-  Money: 0
+  Money: 1000
+  Peaches: 10
 --- !u!114 &989967282996218635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +132,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QueueControl
   queueStartPoint: {fileID: 0}
   customersInQueue: []
+  currentCustomer: {fileID: 0}
+--- !u!114 &7499778137031045226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322469583304636494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bd7d6b86f917e49ab0df2d61f38b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Code.Round.RoundControl
+  roundState: 0

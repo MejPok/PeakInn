@@ -12,9 +12,10 @@ namespace Assets.Code.Player
         public int Money = 300;
         public int Peaches = 10;
 
-        private void Start()
-        {
+        private void Awake() {
+            
             Instance = this;
         }
+        
     }
 }

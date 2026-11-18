@@ -12,9 +12,11 @@ public class RoomManager : MonoBehaviour
     public List<RoomType> roomTypes = new List<RoomType>();
     public Transform roomRoot;
 
+    private void Awake() {
+        Instance = this;
+    }
     private void Start()
     {
-        Instance = this;
         CreateNewRoom("Basic Room");
         CreateNewRoom("Basic Room");
     }

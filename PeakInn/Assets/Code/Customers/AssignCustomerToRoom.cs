@@ -29,6 +29,7 @@ namespace Assets.Code.Customers
                 AssignButton.SetActive(false);
             }
         }
+        
         public void AssigningRoom()
         {
             assigningCustomerToRoom = true;

@@ -18,7 +18,19 @@ public class QueueControl : MonoBehaviour
     {
         for(int i = 0; i < customersInQueue.Count; i++)
         {
-            customersInQueue[i].transform.position = new Vector2(queueStartPoint.position.x - (1.3f * i), queueStartPoint.position.y);
+            if(i == 0)
+            {
+                customersInQueue[i].transform.position = new Vector2(queueStartPoint.position.x, queueStartPoint.position.y);
+                
+            } else if(i == 1)
+            {
+                customersInQueue[i].transform.position = new Vector2(queueStartPoint.position.x, queueStartPoint.position.y + 1.3f);
+                
+            } else
+            {
+                customersInQueue[i].transform.position = new Vector2(queueStartPoint.position.x - (1.3f * i), queueStartPoint.position.y + 1.3f);
+                
+            }
         }
 
         if(customersInQueue.Count != 0)

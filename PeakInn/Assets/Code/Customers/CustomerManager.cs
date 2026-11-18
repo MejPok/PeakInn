@@ -22,9 +22,13 @@ public class CustomerManager : MonoBehaviour
     public List<CustomerBehaviour> customersHosted = new List<CustomerBehaviour>();
 
     public int maxId;
+
+    private void Awake() {
+        Instance = this;
+    }
+
     private void Start()
     {
-        Instance = this;
         RoundControl.Instance.startDayEvent += NewDay;
     }
 
@@ -36,6 +40,7 @@ public class CustomerManager : MonoBehaviour
 
     public void NewDay()
     {
+        
         UpdateCustomersStay();
 
         var random = new System.Random();
